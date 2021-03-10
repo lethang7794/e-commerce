@@ -3,12 +3,31 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const utilsHelper = require('./helpers/utils.helper');
+const { errorHandler } = require('./middlewares/error-handler');
 
-require('dotenv').config();
+// Set up mongoose connection
+var mongoose = require('mongoose');
+var MONGODB_URI = process.env.MONGODB_URI;
+mongoose
+  .connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false, // Make Mongoose the MongoDB driver's findOneAndUpdate() function instead of findAndModify().
+  })
+  .then(() => {
+    console.log(`Mongoose connected to ${MONGODB_URI}!`);
+  })
+  .catch((err) =>
+    console.error('Mongoose could not connect to database!', err)
+  );
+var db = mongoose.connection;
 
 var app = express();
 
@@ -19,5 +38,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', indexRouter);
+app.use(errorHandler);
 
 module.exports = app;

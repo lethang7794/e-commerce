@@ -10,4 +10,10 @@ router.get('/', function (req, res, next) {
   res.send('E-commerce backend');
 });
 
+/* Catch all unmatched routes */
+router.use(function (req, res, next) {
+  const err = new Error('404 - Resource not found');
+  next(err);
+});
+
 module.exports = router;
