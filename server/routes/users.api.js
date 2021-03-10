@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
+const usersController = require('../controllers/users.controller');
+
 /**
  * @route POST api/users/
  * @description User can register account
  * @access Public
  */
+router.post('/', usersController.createUser);
 
 /**
  * @route GET api/users/me
