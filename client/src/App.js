@@ -1,15 +1,38 @@
+import { useEffect } from 'react';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
-import PublicNavBar from './components/PublicNavBar';
 import './App.css';
 
+import authActions from './redux/actions/auth.actions';
+import Routes from './components/Routes';
+
 function App() {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken');
+    if (accessToken && accessToken !== 'undefined') {
+      dispatch(authActions.getCurrentUser(accessToken));
+    } else {
+      dispatch(authActions.logout());
+    }
+  }, [dispatch]);
+
   return (
     <div className='App'>
-      <PublicNavBar />
-      <Container>
-        <h1 className='text-center'>Let's go</h1>
-      </Container>
+      <>
+        {isAuthenticated === undefined ? (
+          <p>Loading...</p>
+        ) : (
+          <Router>
+            <Routes />
+          </Router>
+        )}
+      </>
     </div>
   );
 }

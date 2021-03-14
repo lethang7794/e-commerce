@@ -19,6 +19,13 @@ router.post('/', usersController.createUser);
 router.get('/', usersController.getAllUsers);
 
 /**
+ * @route GET api/users/me
+ * @description Info of current user
+ * @access Login required
+ */
+router.get('/me', authMiddleware.loginRequired, usersController.getCurrentUser);
+
+/**
  * @route POST api/users/:id
  * @description Admin can get info of an user
  * @access Admin
@@ -38,13 +45,6 @@ router.put('/:id', usersController.updateUser);
  * @access Admin
  */
 router.delete('/:id', usersController.deleteUser);
-
-/**
- * @route GET api/users/me
- * @description Info of current user
- * @access Login required
- */
-router.get('/me', authMiddleware.loginRequired, usersController.getCurrentUser);
 
 /**
  * @route GET api/users/:id/orders
