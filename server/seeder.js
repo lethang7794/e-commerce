@@ -95,11 +95,11 @@ var data = [
         description: `Apple iPhone 12 Pro Max was officially released on October 13, 2020. The phone is powered by the new Apple A14 Bionic processor. The smartphone comes with a 6.7 inches Super Retina XDR OLED capacitive touchscreen, 2778 x 1284 pixels resolution and HDR display, True Tone and Wide color (P3) gamut.`,
         price: 1199,
         images: [
-          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-1.webp` },
-          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-2.webp` },
-          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-3.webp` },
-          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-4.webp` },
-          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-5.webp` },
+          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-iphone-12-pro-max-5.jpg` },
         ],
       },
       {
@@ -149,6 +149,292 @@ var data = [
           { imageUrl: `${BACKEND_URL}/images/apple-ipad-mini-3.jpg` },
           { imageUrl: `${BACKEND_URL}/images/apple-ipad-mini-4.jpg` },
           { imageUrl: `${BACKEND_URL}/images/apple-ipad-mini-5.jpg` },
+        ],
+      },
+      {
+        name: `Apple MacBook Air 2020`,
+        description: `Apple MacBook Air 2020`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/apple-macbook-air-2020-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-macbook-air-2020-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-macbook-air-2020-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-macbook-air-2020-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/apple-macbook-air-2020-5.jpg` },
+        ],
+      },
+      {
+        name: `Dell XPS 13 7390`,
+        description: `Dell XPS 13 7390`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/Dell-XPS-13-7390-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Dell-XPS-13-7390-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Dell-XPS-13-7390-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Dell-XPS-13-7390-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Dell-XPS-13-7390-5.jpg` },
+        ],
+      },
+      {
+        name: `HP Elite Dragonfly`,
+        description: `HP Elite Dragonfly`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/HP-Elite-Dragonfly-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/HP-Elite-Dragonfly-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/HP-Elite-Dragonfly-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/HP-Elite-Dragonfly-4.jpg` },
+        ],
+      },
+      {
+        name: `Lenovo Thinkpad X1 Carbon Gen 8`,
+        description: `Lenovo Thinkpad X1 Carbon Gen 8`,
+        price: 1,
+        images: [
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-1.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-2.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-3.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-4.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-5.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-6.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-7.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-8.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-9.jpg`,
+          },
+        ],
+      },
+      {
+        name: `Lenovo Thinkpad X1 Extreme`,
+        description: `Lenovo Thinkpad X1 Extreme`,
+        price: 1,
+        images: [
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Extreme-1.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Extreme-2.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Extreme-3.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Extreme-4.jpg`,
+          },
+        ],
+      },
+      {
+        name: `Microsoft Surface Duo 128GB`,
+        description: `Microsoft Surface Duo 128GB`,
+        price: 1,
+        images: [
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-1.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-2.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-3.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-4.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-5.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-6.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-7.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/Microsoft-Surface-Duo-128GB-8.jpg`,
+          },
+        ],
+      },
+      {
+        name: `Razer Blade 15`,
+        description: `Razer Blade 15`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-5.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-6.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Razer-Blade-15-7.jpg` },
+        ],
+      },
+      {
+        name: `Surface Book 3`,
+        description: `Surface Book 3`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-5.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-6.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Surface-Book-3-7.jpg` },
+        ],
+      },
+      {
+        name: `Samsung Galaxy Fold 2`,
+        description: `Samsung Galaxy Fold 2`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/samsung-galaxy-fold-2-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/samsung-galaxy-fold-2-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/samsung-galaxy-fold-2-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/samsung-galaxy-fold-2-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/samsung-galaxy-fold-2-5.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/samsung-galaxy-fold-2-6.jpg` },
+        ],
+      },
+      {
+        name: `Samsung Galaxy Z Flip`,
+        description: `Samsung Galaxy Z Flip`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/Samsung-Galaxy-Z-Flip-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Samsung-Galaxy-Z-Flip-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Samsung-Galaxy-Z-Flip-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Samsung-Galaxy-Z-Flip-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Samsung-Galaxy-Z-Flip-5.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/Samsung-Galaxy-Z-Flip-6.jpg` },
+        ],
+      },
+      {
+        name: `Vaio Z`,
+        description: `Vaio Z`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/vaio-z-1.png` },
+          { imageUrl: `${BACKEND_URL}/images/vaio-z-2.png` },
+          { imageUrl: `${BACKEND_URL}/images/vaio-z-3.png` },
+          { imageUrl: `${BACKEND_URL}/images/vaio-z-4.png` },
+          { imageUrl: `${BACKEND_URL}/images/vaio-z-5.png` },
+        ],
+      },
+      {
+        name: `Apple Macbook Pro 13 inch Chip M1`,
+        description: `Apple Macbook Pro 13 inch Chip M1`,
+        price: 1,
+        images: [
+          {
+            imageUrl: `${BACKEND_URL}/images/apple-macbook-pro-13-inch-chip-m1-1.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/apple-macbook-pro-13-inch-chip-m1-2.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/apple-macbook-pro-13-inch-chip-m1-3.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/apple-macbook-pro-13-inch-chip-m1-4.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/apple-macbook-pro-13-inch-chip-m1-5.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/apple-macbook-pro-13-inch-chip-m1-6.jpg`,
+          },
+        ],
+      },
+      {
+        name: `A super super super super super super super super super super long name`,
+        description: `This product has a super long name`,
+        price: 1,
+        images: [
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-1.jpg`,
+          },
+        ],
+      },
+      {
+        name: `LG Gram 15`,
+        description: `LG Gram 15`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-15-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-15-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-15-3.jpg` },
+        ],
+      },
+      {
+        name: `LG Gram 17`,
+        description: `LG Gram 17`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-17-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-17-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-17-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-17-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/lg-gram-17-5.jpg` },
+        ],
+      },
+
+      {
+        name: `Microsoft Surface 7`,
+        description: `Microsoft Surface 7`,
+        price: 1,
+        images: [
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-1.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-2.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-3.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-4.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-5.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-6.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-7.jpg` },
+          { imageUrl: `${BACKEND_URL}/images/microsoft-surface-7-8.jpg` },
+        ],
+      },
+      {
+        name: `Microsoft Surface Laptop 2`,
+        description: `Microsoft Surface Laptop 2`,
+        price: 1,
+        images: [
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-1.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-2.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-3.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-4.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-5.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-6.jpg`,
+          },
+          {
+            imageUrl: `${BACKEND_URL}/images/microsoft-surface-laptop-2-7.jpg`,
+          },
         ],
       },
     ],
