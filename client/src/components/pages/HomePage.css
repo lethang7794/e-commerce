@@ -1,0 +1,30 @@
+.card-columns {
+  column-count: 2;
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+.product__image__wrapper--primary {
+  transition: opacity 0.15s linear;
+  opacity: 1;
+}
+
+.product__image__wrapper--primary:hover {
+  transition: opacity 0.25s linear 0.75s;
+  opacity: 0;
+}
+
+.ProductCard:hover {
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+  z-index: 1;
+}

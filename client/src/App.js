@@ -23,7 +23,10 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className='App'>
+    <div
+      className='App'
+      style={{ backgroundColor: '#F5F5F5', minHeight: '100vh' }}
+    >
       <>
         {isAuthenticated === undefined ? (
           <p>Loading...</p>

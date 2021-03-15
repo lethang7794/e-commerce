@@ -15,13 +15,14 @@ const PublicLayout = () => {
       <PublicNavBar />
       <Container>
         <AlertMsg />
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/login' component={LoginPage} />
-          <Route exact path='/register' component={RegisterPage} />
-          <Route component={NotFoundPage} />
-        </Switch>
       </Container>
+
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/login' component={LoginPage} />
+        <Route exact path='/register' component={RegisterPage} />
+        <Route component={NotFoundPage} />
+      </Switch>
     </>
   );
 };
