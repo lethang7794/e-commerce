@@ -4,6 +4,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { productActions } from '../../redux/actions';
 import './HomePage.css';
+import ProductImage from '../ProductImage';
 
 function HomePage() {
   const [pageNum, setPageNum] = useState(1);
@@ -44,49 +45,8 @@ function HomePage() {
                     className='ProductCard text-reset text-decoration-none d-flex flex-column py-3'
                     key={product._id}
                   >
-                    <div className='embed-responsive embed-responsive-1by1'>
-                      {product.images.length > 1 && (
-                        <div className='product__image__wrapper product__image__wrapper--secondary embed-responsive-item d-flex justify-content-center '>
-                          <img
-                            className='product__image product__image--secondary'
-                            style={{
-                              maxWidth: '100%',
-                              objectFit: 'contain',
-                            }}
-                            src={product.images[1].imageUrl}
-                            alt=''
-                          />
-                        </div>
-                      )}
-
-                      <div
-                        className='product__image__wrapper product__image__wrapper--primary embed-responsive-item d-flex justify-content-center'
-                        style={{
-                          opacity: product.images.length <= 1 && '1',
-                        }}
-                      >
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: '0',
-                            right: '0',
-                            bottom: '0',
-                            left: '0',
-                            backgroundColor: 'white',
-                            zIndex: '1',
-                          }}
-                        ></div>
-                        <img
-                          className='product__image product__image--primary'
-                          style={{
-                            maxWidth: '100%',
-                            objectFit: 'contain',
-                            zIndex: '2',
-                          }}
-                          src={product.images[0].imageUrl}
-                          alt=''
-                        />
-                      </div>
+                    <div className='ProductImageWrapper embed-responsive embed-responsive-1by1'>
+                      <ProductImage product={product} />
                     </div>
                     <div className='product__info flex-grow-1 d-flex flex-column mt-1'>
                       <div
