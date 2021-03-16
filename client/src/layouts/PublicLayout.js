@@ -8,7 +8,7 @@ import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import AlertMsg from '../components/AlertMsg';
-import ProductDetailPage from '../components/ProductDetailPage';
+import ProductDetailPage from '../pages/ProductDetailPage';
 // import PrivateRoute from '../Routes/PrivateRoute';
 
 const PublicLayout = () => {

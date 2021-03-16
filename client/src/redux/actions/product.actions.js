@@ -38,10 +38,12 @@ const getOneProduct = (productId) => async (dispatch) => {
   dispatch({ type: types.GET_ONE_PRODUCT_REQUEST, payload: null });
   try {
     const res = await api.get(`/products/${productId}`);
-    dispatch({
-      type: types.GET_ONE_PRODUCT_REQUEST,
-      payload: res.data.data,
-    });
+    setTimeout(() => {
+      dispatch({
+        type: types.GET_ONE_PRODUCT_SUCCESS,
+        payload: res.data.data,
+      });
+    }, 1000);
   } catch (error) {
     dispatch({
       type: types.GET_ONE_PRODUCT_FAILURE,
