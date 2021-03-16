@@ -1,9 +1,9 @@
 import React from 'react';
-import PublicNavBar from '../PublicNavBar';
+import PublicNavBar from '../components/PublicNavBar';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Switch, Route } from 'react-router-dom';
 import NotFoundPage from '../pages/NotFoundPage';
-import AlertMsg from '../AlertMsg';
+import AlertMsg from '../components/AlertMsg';
 
 const AdminLayout = () => {
   return (

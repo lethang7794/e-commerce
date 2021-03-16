@@ -1,63 +1,50 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
-import authActions from '../../redux/actions/auth.actions';
+import authActions from '../redux/actions/auth.actions';
 
-const RegisterPage = () => {
+const LoginPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
-    password2: '',
   });
   const [errors, setErrors] = useState({
-    name: '',
     email: '',
     password: '',
-    password2: '',
   });
-  const loading = useSelector((state) => state.auth.loading);
-
   const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const loading = useSelector((state) => state.auth.loading);
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password, password2 } = formData;
-    if (password !== password2) {
-      setErrors({ ...errors, password2: 'Passwords do not match' });
+    const { email, password } = formData;
+    if (password.length < 3) {
+      setErrors({ ...errors, password: 'Password must be longer than 3' });
       return;
     }
-    dispatch(authActions.register({ name, email, password }));
+    dispatch(authActions.loginRequest({ email, password }));
   };
 
+  if (isAuthenticated) return <Redirect to='/' />;
   return (
     <Container>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
-          <div className='text-center mb-3'>
-            <h1 className='text-primary'>Sign Up</h1>
-            <p className='lead'>Create Your Account</p>
-          </div>
           <Form onSubmit={handleSubmit}>
-            <Form.Group>
-              <Form.Control
-                type='text'
-                placeholder='Name'
-                name='name'
-                value={formData.name}
-                onChange={handleChange}
-              />
-              {errors.name && (
-                <small className='form-text text-danger'>{errors.name}</small>
-              )}
-            </Form.Group>
+            <div className='text-center mb-3'>
+              <h1 className='text-primary'>Sign In</h1>
+              <p className='lead'>Sign Into Your Account</p>
+            </div>
             <Form.Group>
               <Form.Control
                 type='email'
+                required
                 placeholder='Email Address'
                 name='email'
                 value={formData.email}
@@ -74,21 +61,13 @@ const RegisterPage = () => {
                 name='password'
                 value={formData.password}
                 onChange={handleChange}
+                minLength='3'
               />
               {errors.password && (
                 <small className='form-text text-danger'>
                   {errors.password}
                 </small>
               )}
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                type='password'
-                placeholder='Confirm Password'
-                name='password2'
-                value={formData.password2}
-                onChange={handleChange}
-              />
             </Form.Group>
 
             {loading ? (
@@ -107,12 +86,11 @@ const RegisterPage = () => {
               </Button>
             ) : (
               <Button className='btn-block' type='submit' variant='primary'>
-                Register
+                Login
               </Button>
             )}
-
             <p>
-              Already have an account? <Link to='/login'>Sign In</Link>
+              Don't have an account? <Link to='/register'>Sign Up</Link>
             </p>
           </Form>
         </Col>
@@ -121,4 +99,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default LoginPage;

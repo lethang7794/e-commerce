@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Row, Container } from 'react-bootstrap';
 import { productActions } from '../../redux/actions';
 import './HomePage.css';
-import ProductCard from '../ProductCard';
+import ProductCard from '../../components/ProductCard';
 
 function HomePage() {
   const [pageNum, setPageNum] = useState(1);
