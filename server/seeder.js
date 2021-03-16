@@ -204,7 +204,7 @@ var data = [
             imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-4.jpg`,
           },
           {
-            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-5.jpg`,
+            imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-5.png`,
           },
           {
             imageUrl: `${BACKEND_URL}/images/Lenovo-Thinkpad-X1-Carbon-Gen-8-6.jpg`,

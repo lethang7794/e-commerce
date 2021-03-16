@@ -13,7 +13,14 @@ const productReducer = (state = initialState, action) => {
   switch (type) {
     /************************************** REQUEST **************************************/
     case types.GET_ALL_PRODUCTS_REQUEST:
+      return { ...state, loading: true };
     case types.GET_ONE_PRODUCT_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        selectedProduct: { images: new Array(5).fill({ imageUrl: null }) },
+      };
+
     case types.CREATE_PRODUCT_REQUEST:
     case types.UPDATE_PRODUCT_REQUEST:
     case types.DELETE_PRODUCT_REQUEST:
