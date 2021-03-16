@@ -8,8 +8,8 @@ import ProductImage from './ProductImage';
 const ProductCard = ({ product }) => {
   return (
     <Col
-      as={Link}
-      to={'/'}
+      as={product ? Link : Col}
+      to={product ? `/products/${product._id}` : null}
       xs={6}
       md={4}
       lg={3}
@@ -36,12 +36,12 @@ const ProductCard = ({ product }) => {
           style={{
             display: '-webkit-box',
             WebkitBoxOrient: 'vertical',
-            WebkitLineClamp: 2,
+            WebkitLineClamp: 1,
             overflow: 'hidden',
             fontSize: '0.8125rem',
           }}
         >
-          {product ? product.name : <Skeleton count={2} delay={1} />}
+          {product ? product.name : <Skeleton count={1} delay={1} />}
         </div>
         <div
           className='product__price'
