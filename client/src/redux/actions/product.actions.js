@@ -22,10 +22,13 @@ const getAllProducts = (
     const res = await api.get(
       `/products?page=${pageNum}&limit=${limit}${queryString}${sortByString}`
     );
-    dispatch({
-      type: types.GET_ALL_PRODUCTS_SUCCESS,
-      payload: res.data.data,
-    });
+
+    setTimeout(() => {
+      dispatch({
+        type: types.GET_ALL_PRODUCTS_SUCCESS,
+        payload: res.data.data,
+      });
+    }, 1000);
   } catch (error) {
     dispatch({ type: types.GET_ALL_PRODUCTS_FAILURE, payload: error });
   }

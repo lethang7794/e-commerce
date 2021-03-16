@@ -1,7 +1,7 @@
 import * as types from '../constants/product.constants';
 
 const initialState = {
-  products: [],
+  products: new Array(10).fill(null),
   totalPageNum: 1,
   selectedProduct: null,
   loading: false,

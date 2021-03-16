@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton';
 
 import ProductImage from './ProductImage';
 
@@ -16,7 +17,7 @@ const ProductCard = ({ product }) => {
       className='ProductCard text-reset text-decoration-none d-flex flex-column py-3'
     >
       <div className='ProductImageWrapper embed-responsive embed-responsive-1by1'>
-        <ProductImage product={product} />
+        {product ? <ProductImage product={product} /> : <Skeleton delay={1} />}
       </div>
       <div className='product__info flex-grow-1 d-flex flex-column mt-1'>
         <div
@@ -40,7 +41,7 @@ const ProductCard = ({ product }) => {
             fontSize: '0.8125rem',
           }}
         >
-          {product.name}
+          {product ? product.name : <Skeleton count={2} delay={1} />}
         </div>
         <div
           className='product__price'
@@ -50,7 +51,7 @@ const ProductCard = ({ product }) => {
             lineHeight: '1.5rem',
           }}
         >
-          {product.price}$
+          {product ? `${product.price}$` : <Skeleton width={40} delay={1} />}
         </div>
       </div>
     </Col>

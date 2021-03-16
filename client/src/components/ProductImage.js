@@ -36,7 +36,7 @@ function ProductImage({ product }) {
             right: '0',
             bottom: '0',
             left: '0',
-            backgroundImage: `url('${product.images[1].imageUrl}')`,
+            backgroundImage: `url('${secondaryImageSrc}')`,
           }}
         />
       )}
@@ -44,7 +44,7 @@ function ProductImage({ product }) {
       <div
         className='product__image__wrapper product__image__wrapper--primary embed-responsive-item d-flex justify-content-center'
         style={{
-          opacity: product.images.length <= 1 && '1',
+          opacity: !secondaryImageSrc && '1',
         }}
       >
         <div
@@ -66,7 +66,7 @@ function ProductImage({ product }) {
             zIndex: '2',
           }}
           loading='lazy'
-          src={product.images[0].imageUrl}
+          src={primaryImageSrc}
           alt=''
         />
       </div>

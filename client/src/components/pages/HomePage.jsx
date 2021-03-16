@@ -23,25 +23,31 @@ function HomePage() {
   return (
     <div className='HomePage'>
       <Container>
-        {loading ? (
-          <div>Loading</div>
-        ) : (
-          <>
-            {products.length ? (
-              <Row
-                style={{
-                  backgroundColor: 'white',
-                }}
-              >
-                {products.map((product) => (
-                  <ProductCard key={product._id} product={product} />
-                ))}
-              </Row>
-            ) : (
-              <p>There are no products</p>
-            )}
-          </>
-        )}
+        {/* {loading ? (
+          <Row
+            style={{
+              backgroundColor: 'white',
+            }}
+          >
+            {new Array(10).fill(null).map(() => (
+              <ProductCard />
+            ))}
+          </Row>
+        ) : ( */}
+        <>
+          {products.length > 0 && (
+            <Row
+              style={{
+                backgroundColor: 'white',
+              }}
+            >
+              {products.map((product, index) => (
+                <ProductCard key={index} product={product} />
+              ))}
+            </Row>
+          )}
+        </>
+        {/* )} */}
       </Container>
     </div>
   );

@@ -25,7 +25,10 @@ function App() {
   return (
     <div
       className='App'
-      style={{ backgroundColor: '#F5F5F5', minHeight: '100vh' }}
+      style={{
+        // backgroundColor: '#F5F5F5',
+        minHeight: '100vh',
+      }}
     >
       <>
         {isAuthenticated === undefined ? (
